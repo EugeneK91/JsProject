@@ -5,8 +5,9 @@
         <thead>
             <tr>
                 <th></th>
-                <th>FirstName</th>
-                <th>SeconfName</th>
+                <th>First Name</th>
+                <th>Second Name</th>
+                <th>Phone Number</th>
                 <th>Favorite</th>
             </tr>
         </thead>
@@ -15,6 +16,7 @@
                 <td><input type="checkbox" ng-model="contact.isRemove"> </td>
                 <td>{{ contact.firstName }}</td>
                 <td>{{ contact.secondName }}</td>
+                <td>{{ contact.phone }}</td>
                 <td><input type="checkbox" ng-model="contact.favorite"> </td>
                 <td>
                     <a ng-href="#!editContact/{{ contact.id }}" >edit</a> |
