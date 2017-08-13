@@ -1,8 +1,6 @@
-angularApp.controller('AllContactController', function AllContactController($scope, ContactService) {
-    this.contacts = ContactService.list();
-    $scope.contacts = this.contacts;
-   // $scope.foo = 'foo';
-   
+angularApp.controller('AllContactController', function ($scope, ContactService) {
+
+    $scope.contacts =ContactService.list() ;
     $scope.searchText = '';
 
 
@@ -20,7 +18,7 @@ angularApp.controller('AllContactController', function AllContactController($sco
         ContactService.removeList();
 
     $scope.contacts = ContactService.list();
-this.contacts =$scope.contacts;
+
     }
 
     $scope.search = function (item) {
