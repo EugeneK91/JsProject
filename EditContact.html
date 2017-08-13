@@ -1,0 +1,49 @@
+<div ng-controller="ContactController">
+
+    <form>
+        <label>Name</label>
+        <input type="text" name="firstName" ng-model="newcontact.firstName" />
+
+        <label>Email</label>
+        <input type="text" name="secondName" ng-model="newcontact.secondName" />
+
+        <div flex-gt-xs>
+            <label>Calendar</label>
+            <input type="text" name="calendar" ng-model="newcontact.dob" /> Selected Date:
+            <div class="dropdown">
+                <a class="dropdown-toggle" id="dropdown2" role="button" data-toggle="dropdown" data-target="#" href="#">
+                    <div class="input-group"><input type="text" class="form-control" data-ng-model="newcontact.dob"><span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                    </div>
+                </a>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                    <datetimepicker data-ng-model="newcontact.dob" data-datetimepicker-config="{ dropdownSelector: '#dropdown2' }" />
+                </ul>
+            </div>
+
+            <label>Phone</label>
+            <input type="text" name="calendar" ng-model="newcontact.phone" />
+
+            <label>Genbder</label>
+            <label>Male</label><input type="radio" name="male" ng-model="newcontact.gender" value="male" />
+            <label>Female</label><input type="radio" name="female" ng-model="newcontact.gender" value="female" />
+
+            <br>
+
+            <label for="relationShip"> Single select: </label>
+            <select name="relationShip" ng-model="newcontact.relationShip">
+               <option value="home">Home</option>
+             <option value="work">Work</option>
+             <option value="other">Other</option>
+
+            </select>
+            <label>Description</label>
+            <input type="text" name="calendar" ng-model="newcontact.description" />
+        </div>
+        <br/>
+        <input type="hidden" ng-model="newcontact.id" />
+        <input type="hidden" ng-model="newcontact.favorite" />
+        <input type="button" value="Save" ng-click="saveContact()" />
+        <a type="button" href="#!allContacts">Cancel </a>
+    </form>
+
+</div>

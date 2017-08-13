@@ -1,0 +1,28 @@
+<!doctype html>
+<html ng-app="angularApp">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="datetimepicker.css">
+</head>
+
+<body>
+    <p>
+        <a href="#!allContacts"> All Contacts</a>
+        <a href="#!favoriteContacts"> Favorite Contacts</a>
+    </p>
+    <ng-view>
+
+    </ng-view>
+
+</body>
+
+</html>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
+<script src="angular-route.min.js"></script>
+<script src="datetimepicker.js"></script>
+<script src="datetimepicker.templates.js"></script>
+<script src="app.js"></script>
+<script src="contactService.js"></script>

@@ -1,0 +1,34 @@
+<script src="app.js"></script>
+<div ng-controller="AllContactController">
+     <input type="text" ng-model="searchText" placeholder="Enter to Search">
+    <table style="border: 1px solid black">
+        <thead>
+            <tr>
+                <th></th>
+                <th>FirstName</th>
+                <th>SeconfName</th>
+                <th>Favorite</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="contact in contacts | filter:search">
+                <td><input type="checkbox" ng-model="contact.isRemove"> </td>
+                <td>{{ contact.firstName }}</td>
+                <td>{{ contact.secondName }}</td>
+                <td><input type="checkbox" ng-model="contact.favorite"> </td>
+                <td>
+                    <a ng-href="#!editContact/{{ contact.id }}" >edit</a> |
+                    <a href="#" ng-click="delete(contact.id)">delete</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <input type="button" value="Remove" ng-click="removeList()" />
+    <a type="button" href="#!editContact/undefine">Add</a> 
+</div>
+
+<script>
+    
+
+        
+</script>
