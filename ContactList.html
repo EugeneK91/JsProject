@@ -1,7 +1,5 @@
-<script src="app.js"></script>
-<div ng-controller="AllContactController">
-     <input type="text" ng-model="searchText" placeholder="Enter to Search">
-    <table style="border: 1px solid black">
+<input type="text" ng-model="searchText" placeholder="Enter to Search">
+<table style="border: 1px solid black">
         <thead>
             <tr>
                 <th></th>
@@ -12,7 +10,8 @@
             </tr>
         </thead>
         <tbody>
-            <tr ng-repeat="contact in contacts | filter:search">
+
+            <tr ng-repeat="contact in $ctrl.contacts | filter:search">
                 <td><input type="checkbox" ng-model="contact.isRemove"> </td>
                 <td>{{ contact.firstName }}</td>
                 <td>{{ contact.secondName }}</td>
@@ -25,12 +24,5 @@
             </tr>
         </tbody>
     </table>
-    <input type="button" value="Remove" ng-click="removeList()" />
+          <input type="button" value="Remove" ng-click="removeList()" />
     <a type="button" href="#!editContact/undefine">Add</a> 
-</div>
-
-<script>
-    
-
-        
-</script>
