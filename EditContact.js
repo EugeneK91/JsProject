@@ -1,4 +1,5 @@
-
+(function() {
+    'use strict';
 angularApp.controller('ContactController', function ($scope, $routeParams, ContactService) {
 
     $scope.contacts = ContactService.list();
@@ -31,3 +32,4 @@ angularApp.controller('ContactController', function ($scope, $routeParams, Conta
         $scope.newcontact = {};
     }
 })
+})();

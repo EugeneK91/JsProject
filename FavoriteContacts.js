@@ -1,3 +1,5 @@
+(function() {
+    'use strict';
 angularApp.controller('FavoriteController', function ($scope, ContactService) {
     $scope.contacts = ContactService.list();
 
@@ -6,3 +8,4 @@ angularApp.controller('FavoriteController', function ($scope, ContactService) {
         return false;
     }
 })
+})()

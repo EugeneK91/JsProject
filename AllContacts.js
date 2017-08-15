@@ -1,4 +1,6 @@
-angularApp.controller('AllContactController', function ($scope, ContactService) {
+(function() {
+    'use strict';
+angularApp.controller('AllContactController', function AllContactController($scope, ContactService) {
 
     $scope.contacts =ContactService.list() ;
     $scope.searchText = '';
@@ -33,3 +35,4 @@ angularApp.controller('AllContactController', function ($scope, ContactService) 
         return false;
     }
 })
+})();
