@@ -1,0 +1,27 @@
+
+
+<table style="border: 1px solid black">
+        <thead>
+            <tr>
+                <th></th>
+                <th>First Name</th>
+                <th>Second Name</th>
+                <th>Phone Number</th>
+                <th>Favorite</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            {{ $ctrl.contacts[0].firstName}}
+                <tr ng-repeat="contact in $ctrl.contacts | filter:$ctrl.search">
+                <td><input type="checkbox" ng-model="contact.isRemove"> </td>
+                <td>{{ contact.firstName }}</td>
+                <td>{{ contact.secondName }}</td>
+                <td>{{ contact.phone }}</td>
+                <td><input type="checkbox" ng-model="contact.favorite"> </td>
+                <td>
+                    <a type="button" ng-href="#!editContact/{{ contact.id }}" >edit</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
